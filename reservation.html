@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en="Book Your Appointment | Hairlounge" data-ar="احجز موعدك | هيرلونج">Book Your Appointment | Hairlounge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">HAIRLOUNGE</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+      <li><a href="reservation.html" class="active" data-en="Reservations" data-ar="الحجز">Reservations</a></li>
+      <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+      <li><a href="reservation.html" class="nav-cta" data-en="Book Now" data-ar="احجز الآن">Book Now</a></li>
+    </ul>
+    <div style="display:flex; align-items:center; gap:1rem;">
+      <button id="langToggle" class="lang-switch">English <span>|</span> العربية</button>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1567894340315-735d7c361a5d?w=1600&q=80');">
+    <div class="page-hero-content reveal">
+      <h1 data-en="Reserve Your Chair" data-ar="احجز كرسيك">Reserve Your Chair</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="reservation-layout reveal">
+        <div>
+          <div id="reservationFormContainer">
+            <form id="reservationForm" class="reservation-form" action="https://formspree.io/f/FORM_ID" method="POST">
+              <div class="form-group"><label data-en="Full Name *" data-ar="الاسم الكامل *">Full Name *</label><input type="text" name="name" required></div>
+              <div class="form-group"><label data-en="Phone Number *" data-ar="رقم الهاتف *">Phone Number *</label><input type="tel" name="phone" required></div>
+              <div class="form-group"><label data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" name="email"></div>
+              <div class="form-group"><label data-en="Select Service *" data-ar="اختر الخدمة *">Select Service *</label>
+                <select name="service" required>
+                  <option value="" disabled selected data-en="Choose a service" data-ar="اختر خدمة">Choose a service</option>
+                  <option value="Executive Cut" data-en="Executive Cut (15 KD)" data-ar="القصة التنفيذية (15 د.ك)">Executive Cut (15 KD)</option>
+                  <option value="Skin Fade" data-en="Skin Fade (12 KD)" data-ar="تلاشي ناعم (12 د.ك)">Skin Fade (12 KD)</option>
+                  <option value="Beard Sculpt" data-en="Beard Sculpt (8 KD)" data-ar="تشكيل اللحية (8 د.ك)">Beard Sculpt (8 KD)</option>
+                  <option value="Royal Package" data-en="Royal Package (25 KD)" data-ar="الباقة الملكية (25 د.ك)">Royal Package (25 KD)</option>
+                </select>
+              </div>
+              <div class="form-group"><label data-en="Preferred Barber" data-ar="الحلاق المفضل">Preferred Barber</label>
+                <select name="barber">
+                  <option value="" selected data-en="Any available" data-ar="أي حلاق متاح">Any available</option>
+                  <option value="Ahmed">Ahmed</option>
+                  <option value="Youssef">Youssef</option>
+                </select>
+              </div>
+              <div class="form-group"><label data-en="Date *" data-ar="التاريخ *">Date *</label><input type="date" name="date" required></div>
+              <div class="form-group"><label data-en="Time *" data-ar="الوقت *">Time *</label><input type="time" name="time" required></div>
+              <div class="form-group"><label data-en="Special Requests" data-ar="طلبات خاصة">Special Requests</label><textarea name="message"></textarea></div>
+              <button type="submit" class="btn btn-primary" data-en="Confirm Appointment" data-ar="تأكيد الموعد">Confirm Appointment</button>
+            </form>
+          </div>
+          <div id="confirmationMsg" class="confirmation-msg">
+            <div class="check-icon">&#10003;</div>
+            <h3 data-en="Appointment Reserved!" data-ar="تم حجز الموعد!">Appointment Reserved!</h3>
+            <p data-en="You will receive a confirmation via WhatsApp shortly." data-ar="ستتلقى تأكيدًا عبر الواتساب قريبًا."></p>
+          </div>
+        </div>
+        <div class="reservation-info">
+          <h3 data-en="Why Book Ahead?" data-ar="لماذا الحجز المسبق؟">Why Book Ahead?</h3>
+          <p data-en="Priority seating, minimal wait, your preferred barber, and a complimentary espresso upon arrival." data-ar="أولوية الجلوس، انتظار أقل، حلاقك المفضل، وإسبريسو مجاني عند الوصول."></p>
+          <p><strong data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</strong><br>Sat–Thu: 10:00 – 22:00</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/96565545330" target="_blank">+965 6554 5330</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>HAIRLOUNGE</h4><p>83JC+4JV, Salmiya, Kuwait</p></div>
+      <div class="footer-col"><h4 data-en="Contact" data-ar="اتصل">Contact</h4><p><a href="tel:+96565545330">+965 6554 5330</a></p></div>
+    </div>
+    <div class="footer-bottom"><p data-en="&copy; 2025 Hairlounge." data-ar="© 2025 هيرلونج."></p></div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
